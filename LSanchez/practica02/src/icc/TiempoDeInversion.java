@@ -32,7 +32,10 @@ public class TiempoDeInversion {
 
         int diasInversion = fechaInicio.diferencia(fechaInicio, fechaFin);
         System.out.println("El tiempo de inversion es de " + diasInversion + " dias.");
-        System.out.println("El monto final de la inversion es: " + (monto*1.12));
+        double rendimiento = 0.12 * diasInversion / 365;
+        double montoFinal = monto * (1 + rendimiento);
+        System.out.println("El rendimiento es: " + (monto * rendimiento));
+        System.out.println("El monto final de la inversion es: " + montoFinal);
 
         System.out.println("Desea hacer otra simulacion? (si/no)");
         sc.nextLine();
